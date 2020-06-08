@@ -1,0 +1,23 @@
+using System;
+ 
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double[] mas = new double[] { 12, -23, 5, 1, -56 };
+            double d = double.MaxValue;
+            int index = 0;
+            for (int i = 0; i < mas.Length; ++i)
+            {
+                double temp = Math.Abs(mas[i]);
+                if (d > temp)
+                {
+                    d = temp;
+                    index = i;
+                }
+            }
+            Console.WriteLine(index);
+            Console.ReadKey();
+        }
+        
+    }
